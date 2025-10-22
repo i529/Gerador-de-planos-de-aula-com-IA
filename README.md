@@ -4,7 +4,7 @@ Este projeto foi desenvolvido como parte de um **teste técnico** com o objetivo
 
 ---
 
-### 🚀 Tecnologias Utilizadas
+###  Tecnologias Utilizadas
 
 | Tecnologia | Função |
 |-------------|---------|
@@ -16,7 +16,7 @@ Este projeto foi desenvolvido como parte de um **teste técnico** com o objetivo
 
 ---
 
-## 🧩 Funcionalidades
+##  Funcionalidades
 
 ✅ Formulário para entrada de dados (Tema, Série, Disciplina, Duração)  
 ✅ Integração com o modelo **Gemini 2.5 Flash** (rápido e gratuito)  
@@ -32,9 +32,9 @@ Este projeto foi desenvolvido como parte de um **teste técnico** com o objetivo
 
 ---
 
-## 🧱 Estrutura de Dados
+##  Estrutura de Dados
 
-### 📊 Tabela `planos_aula`
+###  Tabela `planos_aula`
 
 ```sql
 create table if not exists planos_aula (
@@ -52,7 +52,7 @@ create table if not exists planos_aula (
 );
 ```
 
-### 🔐 Políticas de Segurança (RLS)
+###  Políticas de Segurança (RLS)
 
 
 ```sql
