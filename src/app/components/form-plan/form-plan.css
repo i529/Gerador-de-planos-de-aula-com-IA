@@ -1,0 +1,34 @@
+section {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+section form label{
+    padding: 10px;
+}
+
+section .container-resposta {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+section .container-resposta h2,
+section .container-resposta h3 {
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+section .container-resposta ul {
+    list-style: none;
+}

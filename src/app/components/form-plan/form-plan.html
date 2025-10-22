@@ -1,0 +1,56 @@
+<section>
+    <h1>Gerador de planos de aula com IA!</h1>
+
+    <form #form="ngForm" (ngSubmit)="enviar()">
+        <label for="">tema</label>
+        <input name="tema" [(ngModel)]="formData.tema" type="text" required placeholder="Ex: Ciclo da água"
+            #tema="ngModel">
+
+        <label for="">serie</label>
+        <input name="serie" [(ngModel)]="formData.serie" type="text" required placeholder="Ex: 8 ano" #serie="ngModel">
+
+        <label for="">disciplina</label>
+        <input name="disciplina" [(ngModel)]="formData.disciplina" type="text" required placeholder="Ex: Matemática"
+            #disciplina="ngModel">
+
+        <label for="">duracao</label>
+        <input name="duracao" [(ngModel)]="formData.duracao" type="text" required placeholder="Ex: 45 minutos"
+            #duracao="ngModel">
+
+        <button type="submit" [disabled]="form.invalid || carregando">
+            {{ carregando ? 'Gerando...' : 'Gerar Plano de Aula!'}}
+        </button>
+    </form>
+
+    <div *ngIf="planoGerado" class="container-resposta">
+
+        <h2>Introdução</h2>
+        <p>{{ planoGerado.introducao }}</p>
+
+
+        <h2>Objetivos BNCC</h2>
+        <ul>
+            <li *ngFor="let objetivo of planoGerado.objetivo_bncc">{{ objetivo }}</li>
+        </ul>
+
+
+        <h2>Etapas</h2>
+        <div *ngFor="let etapa of planoGerado.etapas">
+            <h3>{{ etapa.fase }}</h3>
+            <ul>
+                <li *ngFor="let desc of etapa.descricao">{{ desc }}</li>
+            </ul>
+        </div>
+
+
+        <h2>Rubrica de Avaliação</h2>
+        <ul>
+            <li *ngFor="let item of planoGerado.rubrica_avaliacao">{{ item }}</li>
+        </ul>
+    </div>
+
+    <div *ngIf="!planoGerado">
+        <p>Nenhum plano gerado ainda.</p>
+    </div>
+
+</section>
